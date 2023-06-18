@@ -6,7 +6,8 @@ export default function CalculatorButton({
   textColor = AppTheme.text,
   fontSize = 16,
   backgroundColor,
-  onPress,
+  onPress = null,
+  linearGradient,
 }) {
   const styles = StyleSheet.create({
     container: {
@@ -20,7 +21,6 @@ export default function CalculatorButton({
       fontSize: fontSize,
     },
   });
-
   return (
     <Pressable
       onPress={() => {

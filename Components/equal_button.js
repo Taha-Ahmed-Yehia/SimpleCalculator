@@ -2,10 +2,11 @@ import { Text, View, StyleSheet, Pressable } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import AppTheme from "../Models/AppTheme";
 
-export default function EqualButton({ onPress }) {
+export default function EqualButton({ onPress = null }) {
   return (
     <Pressable
       onPress={() => {
+        console.log(text);
         if (onPress != null) onPress.call();
       }}
       style={styles.container}
